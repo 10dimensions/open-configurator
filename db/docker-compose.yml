@@ -12,6 +12,8 @@ services:
        - ./db.sql:/docker-entrypoint-initdb.d/db.sql
     ports:
       - 5432:5432
+    networks:
+      - database
     restart: unless-stopped
   
   adminer:
