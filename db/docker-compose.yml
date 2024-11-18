@@ -51,3 +51,6 @@ services:
 volumes:
     #postgres:
     pgadmin:
+
+networks:
+  database:
