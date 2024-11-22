@@ -13,6 +13,8 @@ services:
     image: hasura/graphql-engine:v2.42.0
     ports:
       - "8081:8081"
+    networks:
+      - database
     restart: always
     environment:
       ## postgres database to store Hasura metadata
@@ -52,3 +54,8 @@ services:
 
 volumes:
   db_data:
+
+networks:
+  database:
+    name: database
+    external: true
