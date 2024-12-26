@@ -13,7 +13,7 @@ services:
     ports:
       - 5432:5432
     networks:
-      - database
+      - default
     restart: unless-stopped
   
   adminer:
@@ -52,7 +52,7 @@ volumes:
     #postgres:
     pgadmin:
 
-networks:
-  database:
-    name: database
-    external: true
+#networks:
+  #database:
+  #  name: database
+  #  external: true
