@@ -1,0 +1,34 @@
+{
+    "kind": "collectionType",
+    "collectionName": "pricing_rules",
+    "info": {
+      "singularName": "pricing-rule",
+      "pluralName": "pricing-rules"
+    },
+    "attributes": {
+      "name": { "type": "string", "required": true },
+      "description": { "type": "text" },
+      "type": {
+        "type": "enumeration",
+        "enum": [
+          "fixed",
+          "percentage",
+          "formula",
+          "quantity_based",
+          "combination"
+        ],
+        "required": true
+      },
+      "priority": { "type": "integer", "default": 0 },
+      "conditions": {
+        "type": "component",
+        "component": "rule.pricing-conditions",
+        "repeatable": true
+      },
+      "formula": { "type": "text" },
+      "parameters": { "type": "json" },
+      "validFrom": { "type": "datetime" },
+      "validTo": { "type": "datetime" },
+      "metadata": { "type": "json" }
+    }
+  }

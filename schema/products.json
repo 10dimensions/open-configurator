@@ -1,0 +1,41 @@
+{
+    "kind": "collectionType",
+    "collectionName": "products",
+    "info": {
+      "singularName": "product",
+      "pluralName": "products"
+    },
+    "attributes": {
+      "name": { "type": "string", "required": true },
+      "sku": { "type": "string", "required": true, "unique": true },
+      "status": {
+        "type": "enumeration",
+        "enum": ["draft", "active", "discontinued"],
+        "default": "draft"
+      },
+      "basePrice": { "type": "decimal", "required": true },
+      "currency": { "type": "string", "required": true },
+      "components": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::component.component"
+      },
+      "compatibilityMatrix": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::compatibility.compatibility"
+      },
+      "pricingRules": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::pricing-rule.pricing-rule"
+      },
+      "visualizations": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::visualization.visualization"
+      },
+      "specifications": { "type": "json" },
+      "metadata": { "type": "json" }
+    }
+}

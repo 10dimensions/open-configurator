@@ -1,0 +1,29 @@
+{
+    "kind": "collectionType",
+    "collectionName": "product_families",
+    "info": {
+      "singularName": "product-family",
+      "pluralName": "product-families"
+    },
+    "attributes": {
+      "name": { "type": "string", "required": true },
+      "code": { "type": "string", "required": true, "unique": true },
+      "description": { "type": "text" },
+      "products": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::product.product"
+      },
+      "defaultConfigurations": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::configuration.configuration"
+      },
+      "configurationRules": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::configuration-rule.configuration-rule"
+      },
+      "metadata": { "type": "json" }
+    }
+}

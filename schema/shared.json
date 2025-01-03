@@ -1,0 +1,44 @@
+{
+    "shared.price-modifier": {
+      "displayName": "PriceModifier",
+      "category": "shared",
+      "attributes": {
+        "type": {
+          "type": "enumeration",
+          "enum": ["fixed", "percentage", "formula"],
+          "required": true
+        },
+        "value": { "type": "decimal" },
+        "formula": { "type": "text" },
+        "currency": { "type": "string" }
+      }
+    },
+    "shared.inventory": {
+      "displayName": "Inventory",
+      "category": "shared",
+      "attributes": {
+        "sku": { "type": "string" },
+        "quantity": { "type": "integer" },
+        "backorderAllowed": { "type": "boolean", "default": false },
+        "leadTime": { "type": "integer" }
+      }
+    },
+    "rule.conditions": {
+      "displayName": "RuleConditions",
+      "category": "rule",
+      "attributes": {
+        "type": {
+          "type": "enumeration",
+          "enum": ["component", "option", "quantity", "custom"],
+          "required": true
+        },
+        "operator": {
+          "type": "enumeration",
+          "enum": ["equals", "not_equals", "includes", "excludes", "greater_than", "less_than"],
+          "required": true
+        },
+        "value": { "type": "json", "required": true },
+        "customLogic": { "type": "text" }
+      }
+    }
+}

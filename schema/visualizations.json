@@ -1,0 +1,35 @@
+{
+    "kind": "collectionType",
+    "collectionName": "visualizations",
+    "info": {
+      "singularName": "visualization",
+      "pluralName": "visualizations"
+    },
+    "attributes": {
+      "name": { "type": "string", "required": true },
+      "type": {
+        "type": "enumeration",
+        "enum": ["2d", "3d", "hybrid"],
+        "required": true
+      },
+      "baseModel": {
+        "type": "component",
+        "component": "visualization.model",
+        "required": true
+      },
+      "variants": {
+        "type": "component",
+        "component": "visualization.model",
+        "repeatable": true
+      },
+      "transformations": {
+        "type": "component",
+        "component": "visualization.transformation",
+        "repeatable": true
+      },
+      "renderingOptions": { "type": "json" },
+      "interactionRules": { "type": "json" },
+      "metadata": { "type": "json" }
+    }
+  }
+  

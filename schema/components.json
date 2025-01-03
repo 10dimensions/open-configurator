@@ -1,0 +1,42 @@
+{
+    "kind": "collectionType",
+    "collectionName": "components",
+    "info": {
+      "singularName": "component",
+      "pluralName": "components"
+    },
+    "attributes": {
+      "name": { "type": "string", "required": true },
+      "code": { "type": "string", "required": true },
+      "type": { "type": "string", "required": true },
+      "category": {
+        "type": "enumeration",
+        "enum": ["structural", "mechanical", "electrical", "aesthetic", "accessory"]
+      },
+      "required": { "type": "boolean", "default": false },
+      "multipleAllowed": { "type": "boolean", "default": false },
+      "minQuantity": { "type": "integer", "default": 0 },
+      "maxQuantity": { "type": "integer" },
+      "order": { "type": "integer" },
+      "options": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::option.option"
+      },
+      "defaultOption": {
+        "type": "relation",
+        "relation": "oneToOne",
+        "target": "api::option.option"
+      },
+      "dependencies": {
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::component-dependency.component-dependency"
+      },
+      "visualData": {
+        "type": "json",
+        "required": true
+      },
+      "metadata": { "type": "json" }
+    }
+}

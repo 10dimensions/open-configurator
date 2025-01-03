@@ -1,0 +1,33 @@
+{
+    "visualization.model": {
+      "displayName": "VisualizationModel",
+      "attributes": {
+        "format": {
+          "type": "enumeration",
+          "enum": ["svg", "gltf", "obj", "custom"],
+          "required": true
+        },
+        "uri": { "type": "string", "required": true },
+        "version": { "type": "string" },
+        "materials": { "type": "json" },
+        "textures": { "type": "json" }
+      }
+    },
+    "visualization.transformation": {
+      "displayName": "Transformation",
+      "attributes": {
+        "type": {
+          "type": "enumeration",
+          "enum": ["position", "rotation", "scale", "material", "animation"],
+          "required": true
+        },
+        "trigger": {
+          "type": "enumeration",
+          "enum": ["option_selected", "component_changed", "user_interaction", "custom"],
+          "required": true
+        },
+        "parameters": { "type": "json", "required": true },
+        "conditions": { "type": "json" }
+      }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "kind": "collectionType",
+    "collectionName": "configuration_rules",
+    "info": {
+      "singularName": "configuration-rule",
+      "pluralName": "configuration-rules"
+    },
+    "attributes": {
+      "name": { "type": "string", "required": true },
+      "description": { "type": "text" },
+      "type": {
+        "type": "enumeration",
+        "enum": [
+          "requirement",
+          "incompatibility",
+          "dependency",
+          "recommendation",
+          "restriction"
+        ],
+        "required": true
+      },
+      "priority": { "type": "integer", "default": 0 },
+      "conditions": {
+        "type": "component",
+        "component": "rule.conditions",
+        "repeatable": true,
+        "required": true
+      },
+      "actions": {
+        "type": "component",
+        "component": "rule.actions",
+        "repeatable": true,
+        "required": true
+      },
+      "errorMessage": { "type": "string" },
+      "metadata": { "type": "json" }
+    }
+}
