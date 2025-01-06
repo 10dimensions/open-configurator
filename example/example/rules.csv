@@ -1,0 +1,5 @@
+name,code,type,priority,component_code,conditions,actions,error_message,validation_type,custom_logic,metadata
+Carbon Size Limit,RULE-CBN-001,restriction,1,MTB-FRM-001,"{""selected_option"":""MTB-FRM-CBL"",""rider_weight"":{""max"":120}}","{""block_selection"":true,""show_message"":true}","Weight limit exceeded for carbon frame",hard,null,"{""rule_category"":""safety"",""version"":""1.0""}"
+Rod Power Match,RULE-ROD-001,requirement,2,FISH-BLK-001,"{""action"":""fast"",""line_weight"":{""min"":10}}","{""filter_options"":[""FISH-BLK-IM8""],""adjust_price"":1.1}","Select appropriate power rating for action",soft,"def validate(config):
+    return config.line_weight >= 10 if config.action == 'fast' else True","{""rule_category"":""performance"",""version"":""1.1""}"
+Generator Power,RULE-GEN-001,compatibility,1,GEN-ENG-001,"{""voltage"":""400V"",""power_output"":{""min"":15}}","{""require_components"":[""GEN-ALT-001""],""adjust_specs"":{""cooling_capacity"":2.0}}","Higher power requires industrial alternator",hard,null,"{""rule_category"":""technical"",""version"":""1.0""}"

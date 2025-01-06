@@ -1,0 +1,4 @@
+name,type,priority,conditions,actions,error_message,metadata
+Premium Components,requirement,1,"{""base_price"":{""min"":2500}}","{""required_options"":[""FRM-CBN"",""WHL-29-CBN""]}","Premium bikes require carbon frame and wheels","{""reason"":""quality_standard""}"
+Size Compatibility,compatibility,2,"{""selected_option"":""FRM-CBN-XL""}","{""incompatible_options"":[""WHL-275""]}","29"" wheels required for XL frames","{""reason"":""geometry""}"
+Weight Limit,restriction,3,"{""total_weight"":{""max"":15}}","{""restrict_options"":[""WHL-STEEL""]}","Steel wheels exceed weight limit","{""reason"":""performance""}"

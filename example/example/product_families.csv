@@ -1,0 +1,4 @@
+name,code,description,default_currency,category,status,metadata
+Mountain Bikes,MTB,"High-performance mountain bikes",USD,bikes,active,"{""configurator_type"":""3d"",""markets"":[""US"",""EU""],""min_build_time"":""2_days""}"
+Fishing Rods,FISH,"Professional fishing equipment",EUR,sports,active,"{""configurator_type"":""2d"",""markets"":[""EU"",""ASIA""],""min_build_time"":""1_day""}"
+Generators,GEN,"Industrial power generators",USD,power,active,"{""configurator_type"":""3d"",""markets"":[""US""],""min_build_time"":""5_days""}"

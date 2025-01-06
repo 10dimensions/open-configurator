@@ -1,0 +1,4 @@
+name,type,priority,conditions,formula,parameters,valid_from,valid_to
+Bundle Discount,percentage,1,"{""components"":[""FRM-CBN"",""WHL-29-CBN""]}","price * (1 - discount)","{""discount"":0.1}","2024-01-01","2024-12-31"
+Volume Discount,fixed,2,"{""quantity"":{""min"":2}}","price - (quantity * discount)","{""discount"":100}","2024-01-01","2024-12-31"
+Season Markup,percentage,3,"{""date"":{""from"":""2024-05-01"",""to"":""2024-08-31""}}","price * (1 + markup)","{""markup"":0.05}","2024-05-01","2024-08-31"

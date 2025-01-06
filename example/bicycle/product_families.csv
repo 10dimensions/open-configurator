@@ -1,0 +1,4 @@
+name,code,description,visual_defaults,metadata
+Mountain Bikes,MTB,"High-performance mountain bikes","{""default_color"":""black"",""default_view"":""side""}","{""terrain"":""off-road"",""skill_level"":""intermediate-expert""}"
+Road Bikes,ROAD,"Professional road bikes","{""default_color"":""red"",""default_view"":""side""}","{""terrain"":""paved"",""skill_level"":""intermediate-expert""}"
+City Bikes,CITY,"Urban commuter bikes","{""default_color"":""silver"",""default_view"":""side""}","{""terrain"":""urban"",""skill_level"":""beginner""}"

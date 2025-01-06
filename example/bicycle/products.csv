@@ -1,0 +1,4 @@
+name,sku,status,basePrice,currency,family,specifications,visual_data,metadata
+Pro MTB Carbon,MTB-001,active,2999.99,USD,MTB,"{""frame_material"":""carbon"",""wheel_size"":29,""suspension"":""full"",""weight_kg"":12.5}","{""3d_model"":""mtb_001.glb"",""2d_preview"":""mtb_001.svg"",""texture_maps"":{""base"":""mtb_001_base.png"",""normal"":""mtb_001_normal.png""}}","{""category"":""professional"",""year"":2024}"
+Race Road Elite,ROAD-001,active,3499.99,USD,ROAD,"{""frame_material"":""carbon"",""wheel_size"":700,""weight_kg"":7.8}","{""3d_model"":""road_001.glb"",""2d_preview"":""road_001.svg"",""texture_maps"":{""base"":""road_001_base.png""}}","{""category"":""professional"",""year"":2024}"
+City Commuter,CITY-001,active,999.99,USD,CITY,"{""frame_material"":""aluminum"",""wheel_size"":28,""weight_kg"":13.5}","{""3d_model"":""city_001.glb"",""2d_preview"":""city_001.svg""}","{""category"":""commuter"",""year"":2024}"

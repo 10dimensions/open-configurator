@@ -1,0 +1,4 @@
+name,code,component_code,price_modifier,technical_specs,visual_data,inventory,rules
+Carbon Frame XL,FRM-CBN-XL,FRM-001,800,"{""material"":""carbon"",""size"":""XL"",""weight_kg"":2.1}","{""3d_model"":""frame_carbon_xl.glb"",""textures"":{""base"":""carbon_weave.png""},""colors"":[""#000000"",""#FF0000""]}","{""sku"":""FRM-CBN-XL"",""stock"":5,""reorder_point"":2}","{""incompatible_with"":[""WHL-275""]}"
+Fox Fork 160mm,FRK-FOX-160,FRK-001,599.99,"{""travel"":160,""material"":""carbon"",""weight_kg"":1.8}","{""3d_model"":""fork_fox_160.glb"",""animations"":{""compress"":""fork_compress.anim""}}","{""sku"":""FRK-FOX-160"",""stock"":3,""reorder_point"":2}","{""requires"":[""FRM-CBN""]}"
+29" Carbon Wheels,WHL-29-CBN,WHL-001,1200,"{""size"":29,""material"":""carbon"",""type"":""tubeless"",""weight_kg"":1.6}","{""3d_model"":""wheel_29_carbon.glb"",""rotations"":{""speed"":1}}","{""sku"":""WHL-29-CBN"",""stock"":4,""reorder_point"":2}","{""requires"":[""FRM-CBN""]}"
