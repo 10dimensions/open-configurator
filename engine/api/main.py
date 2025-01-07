@@ -1,5 +1,9 @@
 # app/main.py
 from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import Dict, List, Optional
+
+from engine.api.collections import Collection, Document, StrapiClient
 
 app = FastAPI()
 
@@ -7,9 +11,11 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
+
 @app.get("/pricing")
 def compute_price():
     return {"price": 10}
+
 
 # API endpoints
 @app.post("/api/{collection}", response_model=Dict)

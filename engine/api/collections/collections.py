@@ -5,8 +5,6 @@ import pandas as pd
 import json
 from typing import Dict, List, Optional
 from pydantic import BaseModel
-import io
-import asyncio
 import os
 from enum import Enum
 

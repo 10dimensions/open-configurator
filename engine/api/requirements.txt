@@ -7,3 +7,8 @@ uuid
 asyncpg
 
 dataclasses
+
+pandas
+httpx
+pydantic
+asyncio
