@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Dict, List, Optional
 
-from store import Collection, Document, StrapiClient
+from store.store import Collection, Document, StrapiClient
 
 app = FastAPI()
 
