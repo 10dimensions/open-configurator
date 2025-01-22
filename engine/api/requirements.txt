@@ -11,4 +11,6 @@ dataclasses
 pandas
 httpx
 pydantic
+pydantic-settings
 asyncio
+python-dotenv

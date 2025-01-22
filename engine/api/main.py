@@ -1,9 +1,12 @@
 # app/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, HTTPException, BackgroundTasks
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, List, Optional
 
-from store.store import Collection, Document, StrapiClient
+from store.store import Collection, Document, StrapiClient, BulkResponse
+
+from config import config
 
 app = FastAPI()
 
@@ -15,6 +18,11 @@ def read_root():
 @app.get("/pricing")
 def compute_price():
     return {"price": 10}
+
+
+@app.get("/checkenv")
+def checkev():
+    return config.OC_URL
 
 
 # API endpoints

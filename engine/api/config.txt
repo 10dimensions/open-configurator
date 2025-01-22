@@ -1,0 +1,15 @@
+import os
+from fastapi import FastAPI
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+DOTENV = os.path.join(os.path.dirname(__file__), ".env")
+print(DOTENV)
+
+class Settings(BaseSettings):
+    app_name: str = "Open Configurator API"
+    admin_email: str = "admin@xyz.com"
+    #env = SettingsConfigDict(env_file=".env", env_file_encoding='utf-8')
+    env = SettingsConfigDict(env_file=DOTENV, extra="forbid")
+
+
+settings = Settings()

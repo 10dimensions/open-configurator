@@ -1,11 +1,19 @@
-from fastapi import FastAPI
-from pydantic_settings import BaseSettings, SettingsConfigDict
+import os
+from dotenv import load_dotenv
+
+# Get the path to the directory this file is in
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+print(BASEDIR)
+# Connect the path with your '.env' file name
+load_dotenv(os.path.join(BASEDIR, '.env'))
 
 
-class Settings(BaseSettings):
-    app_name: str = "Open Configurator API"
-    admin_email: str
-    env = SettingsConfigDict(env_file=".env")
+class Config():
+    OC_URL: str = os.getenv("OC_URL")
+    OC_TOKEN: str = os.getenv("OC_TOKEN")
 
 
-settings = Settings()
+try:
+    config = Config()
+except Exception:
+    print(Exception)
