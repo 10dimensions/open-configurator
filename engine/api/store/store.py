@@ -7,21 +7,16 @@ from typing import Dict, List, Optional
 from pydantic import BaseModel
 import os
 from enum import Enum
-from config import BASEDIR
-#from config import settings
+from config import config
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 # Configuration
-#print(settings.env)
-'''
-STRAPI_URL = os.environ["OC_URL"] #"http://localhost:1337"
-STRAPI_TOKEN = os.environ["OC_TOKEN"] #"your_token_here"
 
-print(STRAPI_TOKEN)
-print(STRAPI_URL)
-'''
+STRAPI_URL = config.OC_URL #"http://localhost:1337"
+STRAPI_TOKEN = config.OC_TOKEN #"your_token_here"
+
 
 # Models
 class Collection(str, Enum):
