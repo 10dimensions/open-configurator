@@ -9,7 +9,8 @@
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "reset:acc": "npm run strapi admin:reset-user-password --email='rndaorg@gmail.com' --password='password@980'"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.6.0",
